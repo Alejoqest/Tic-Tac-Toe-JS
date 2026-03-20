@@ -1,5 +1,9 @@
 import { elements } from "./htmlElements.js";
 
+export const getValues = () => {
+  return [...elements.spaces].map((v) => v.innerText);
+}
+
 export const removeContent = () => {
   const spaces = elements.spaces;
   const classes = ["end", "X", "O", "win"];

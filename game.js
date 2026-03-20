@@ -4,8 +4,9 @@ import {
   removeContent,
   setStatus,
   setSpace,
+  getValues,
 } from "./html.js";
-import { elements, setEvents } from "./htmlElements.js";
+import { setEvents } from "./htmlElements.js";
 
 export const ticTacToe = () => {
   let turnoX = false;
@@ -35,20 +36,15 @@ export const ticTacToe = () => {
   };
 
   const checkInput = () => {
-    const spaces = elements.spaces;
+    const spaces = getValues();
 
     for (let pattern of winPatterns) {
-      let val1 = spaces[pattern[0]].innerText;
-      let val2 = spaces[pattern[1]].innerText;
-      let val3 = spaces[pattern[2]].innerText;
+      const [a, b, c] = pattern;
+      let val1 = spaces[a];
+      let val2 = spaces[b];
+      let val3 = spaces[c];
 
-      if (
-        val1 != "" &&
-        val2 != "" &&
-        val3 != "" &&
-        val1 == val2 &&
-        val2 == val3
-      ) {
+      if (val1 && val1 == val2 && val2 == val3) {
         hasEnded = true;
         setWin(pattern);
         endGame();
@@ -102,8 +98,8 @@ export const ticTacToe = () => {
         ? "Empate!"
         : `Victoria de ${curPlayer}!`
       : turno == 1
-      ? `Empieza ${curPlayer}`
-      : `Turno ${turno} : Juega ${curPlayer}`;
+        ? `Empieza ${curPlayer}`
+        : `Turno ${turno} : Juega ${curPlayer}`;
     setStatus(status);
   };
 
