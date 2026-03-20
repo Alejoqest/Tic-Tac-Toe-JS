@@ -1,12 +1,11 @@
 import {
-  getSpaces,
   setEnd,
   setWin,
   removeContent,
   setStatus,
   setSpace,
 } from "./html.js";
-import { setEvents } from "./htmlElements.js";
+import { elements, setEvents } from "./htmlElements.js";
 
 export const ticTacToe = () => {
   let turnoX = false;
@@ -36,7 +35,7 @@ export const ticTacToe = () => {
   };
 
   const checkInput = () => {
-    const spaces = getSpaces();
+    const spaces = elements.spaces;
 
     for (let pattern of winPatterns) {
       let val1 = spaces[pattern[0]].innerText;
@@ -117,8 +116,7 @@ export const ticTacToe = () => {
     setRandomOrder();
     turno = 1;
     setGame(false, false);
-    const spaces = getSpaces();
-    removeContent(spaces);
+    removeContent();
     changeStatus();
   };
 

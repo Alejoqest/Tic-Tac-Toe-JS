@@ -1,7 +1,9 @@
-const elements = {
+export const elements = {
   grid: document.querySelector(".grid"),
+  status: document.querySelector("#status"),
   btn: document.querySelector(".btn"),
   playersName: document.querySelectorAll("input"),
+  spaces: document.querySelectorAll(".space")
 };
 
 export const setEvents = (gridClickFun, nameFun, resetFun) => {

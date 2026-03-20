@@ -1,12 +1,7 @@
-export const getSpaces = () => {
-  return document.querySelectorAll(".space");
-};
+import { elements } from "./htmlElements.js";
 
-export const getStatus = () => {
-  return document.querySelector("#status");
-};
-
-export const removeContent = (spaces) => {
+export const removeContent = () => {
+  const spaces = elements.spaces;
   const classes = ["end", "X", "O", "win"];
   for (const space of spaces) {
     for (const c of classes) {
@@ -29,7 +24,7 @@ export const setWin = (spaces, pattern) => {
 };
 
 export const setStatus = (status) => {
-  const state = getStatus();
+  const state = elements.status;
   state.innerText = status;
 };
 
