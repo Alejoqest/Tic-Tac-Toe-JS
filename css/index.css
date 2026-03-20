@@ -50,6 +50,7 @@ input {
 .flex {
     display: flex;
     justify-content: space-around;
+    margin: 1rem 0;
 }
 
 .body {
@@ -107,7 +108,7 @@ input {
 }
 
 #status, .space {
-    font-size: 4rem;
+    font-size: xx-large;
 }
 
 #status {
@@ -125,4 +126,35 @@ input {
 
 .btn:hover {
     background: var(--r);
+}
+
+@media screen and (max-width : 800px) {    
+    .body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: large;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+    }
+
+    .grid {
+        min-height: 400px;
+    }
+
+    .flex-el {
+        width: 800px;
+    }
+}
+
+@media screen and (max-width : 450px) {    
+    .flex-el {
+        margin: 0;
+        border-radius: 0;
+    }
 }
