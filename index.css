@@ -1,0 +1,122 @@
+:root {
+    --c : rgba(255,255,255,0.7);
+    --cd : rgba(200, 200, 200, 0.7);
+    --cbd : rgba(151, 151, 151, 0.7);
+    --bg-f : rgb(35, 35, 35);
+    --t : transparent;
+    --r : #FC354C;
+    --rd : rgba(174, 24, 42, 0.7);
+    --b : #0ABFBC;
+    --bd : rgba(98, 201, 200, 0.7);
+}
+
+h1, label {
+    color: var(--bg-f);
+}
+
+html {
+    height:100%;
+}
+
+body {
+    margin: 0;
+    background-image:
+  repeating-linear-gradient(45deg, var(--c) 0, var(--c) 20px, var(--t) 20px, var(--t) 32px, var(--c) 32px, var(--c) 44px, var(--t) 44px, var(--t) 56px, var(--c) 56px, var(--c) 68px, var(--t) 68px, var(--t) 80px, var(--c) 0),
+  repeating-linear-gradient(-45deg, var(--c) 0, var(--c) 20px, var(--t) 20px, var(--t) 32px, var(--c) 32px, var(--c) 44px, var(--t) 44px, var(--t) 56px, var(--c) 56px, var(--c) 68px, var(--t) 68px, var(--t) 80px, var(--c) 0),
+  linear-gradient(to bottom right, #FC354C, #0ABFBC);
+
+}
+
+label {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+input {
+    padding: .5rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: var(--cd);
+    color: var(--bg-f);
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.body {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    height: 100vh;
+}
+
+.flex-el {
+    width: 50%;
+    margin: 1rem;
+    background-color: var(--c);
+    padding: 1rem;
+    border-radius: 1.5rem;
+}
+
+.grid {
+    --gap : 1rem;
+    --template : calc(((100% / 3) - (var(--gap) / 1.5)));
+    display: grid;
+    grid-template-columns: var(--template) var(--template) var(--template);
+    grid-template-rows: var(--template) var(--template) var(--template);
+    grid-gap: var(--gap);
+}
+
+.space {
+    padding: 1rem;
+    background-color: var(--cd);
+    text-align: center;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space.end {
+    background-color: var(--cbd);
+}
+
+.space.X {
+    color: var(--r);
+}
+
+.space.O {
+    color: var(--b);
+}
+
+.O.win.end {
+    background-color: var(--bd);
+}
+
+.X.win.end {
+    background-color: var(--rd);
+}
+
+#status, .space {
+    font-size: 4rem;
+}
+
+#status {
+    text-align: center;
+}
+
+.btn {
+    padding: 1rem;
+    background: var(--b);
+    border: var(--c);
+    color: var(--c);
+    border-radius: 2rem;
+    transition: 1s;
+}
+
+.btn:hover {
+    background: var(--r);
+}
