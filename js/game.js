@@ -5,6 +5,7 @@ import {
   setStatus,
   setSpace,
   getValues,
+  clearNames,
 } from "./html.js";
 import { setEvents } from "./htmlElements.js";
 
@@ -116,8 +117,13 @@ export const ticTacToe = () => {
     changeStatus();
   };
 
+  const setup = () => {
+    clearNames();
+  }
+
   const runGame = () => {
     setEvents(handleClick, changeName, startGame);
+    setup();
     startGame();
   };
 

@@ -4,6 +4,13 @@ export const getValues = () => {
   return [...elements.spaces].map((v) => v.innerText);
 }
 
+export const clearNames = () => {
+  const players = elements.playersName;
+  for (const player of players) {
+    player.value = player.id.split("jugador").filter((v) => v != ",").pop();
+  }
+}
+
 export const removeContent = () => {
   const spaces = elements.spaces;
   const classes = ["end", "X", "O", "win"];
