@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
     --c : rgba(255,255,255,0.7);
     --cd : rgba(200, 200, 200, 0.7);
@@ -8,6 +10,10 @@
     --rd : rgba(174, 24, 42, 0.7);
     --b : #0ABFBC;
     --bd : rgba(98, 201, 200, 0.7);
+}
+
+* {
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 h1, label {
