@@ -7,6 +7,7 @@ const elements = {
 export const setEvents = (gridClickFun, nameFun, resetFun) => {
   elements.grid.addEventListener("click", (e) => {
     const space = e.target.closest(".space");
+    if (!space) return;
     gridClickFun(space);
   });
 
