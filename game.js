@@ -51,14 +51,14 @@ export const ticTacToe = () => {
         return;
       }
     }
-    changeTurn(spaces);
+    changeTurn();
   };
 
-  const changeTurn = (spaces) => {
+  const changeTurn = () => {
     turnoX = !turnoX;
     turno = ++turno;
     if (turno == 10) setGame(true, true);
-    if (hasEnded) endGame(spaces);
+    if (hasEnded) endGame();
     changeStatus();
   };
 
