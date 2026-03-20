@@ -50,8 +50,8 @@ export const ticTacToe = () => {
         val2 == val3
       ) {
         hasEnded = true;
-        setWin(spaces, pattern);
-        endGame(spaces);
+        setWin(pattern);
+        endGame();
         return;
       }
     }
@@ -107,8 +107,8 @@ export const ticTacToe = () => {
     setStatus(status);
   };
 
-  const endGame = (spaces) => {
-    setEnd(spaces);
+  const endGame = () => {
+    setEnd();
     changeStatus();
   };
 

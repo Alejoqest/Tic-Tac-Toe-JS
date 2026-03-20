@@ -11,13 +11,15 @@ export const removeContent = () => {
   }
 };
 
-export const setEnd = (spaces) => {
+export const setEnd = () => {
+  const spaces = elements.spaces;
   for (const space of spaces) {
     space.classList.toggle("end");
   }
 };
 
-export const setWin = (spaces, pattern) => {
+export const setWin = (pattern) => {
+  const spaces = elements.spaces;
   for (let i = 0; i < pattern.length; i++) {
     spaces[pattern[i]].classList.toggle("win");
   }
