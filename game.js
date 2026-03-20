@@ -1,6 +1,4 @@
 import {
-  createGrid,
-  createStatus,
   getSpaces,
   setEnd,
   setWin,
@@ -125,9 +123,7 @@ export const ticTacToe = () => {
   };
 
   const runGame = () => {
-    setEvents(handleClick, changeName, startGame)
-    //createGrid(handleClick);
-    //createStatus(changeName, startGame);
+    setEvents(handleClick, changeName, startGame);
     startGame();
   };
 
