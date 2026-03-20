@@ -8,6 +8,7 @@ import {
   setStatus,
   setSpace,
 } from "./html.js";
+import { setEvents } from "./htmlElements.js";
 
 export const ticTacToe = () => {
   let turnoX = false;
@@ -29,8 +30,7 @@ export const ticTacToe = () => {
     [6, 7, 8],
   ];
 
-  const handleClick = (e) => {
-    const space = e.target;
+  const handleClick = (space) => {
     if (hasEnded || hasTie || space.innerText != "") return;
     const val = turnoX ? "X" : "O";
     setSpace(space, val);
@@ -125,8 +125,9 @@ export const ticTacToe = () => {
   };
 
   const runGame = () => {
-    createGrid(handleClick);
-    createStatus(changeName, startGame);
+    setEvents(handleClick, changeName, startGame)
+    //createGrid(handleClick);
+    //createStatus(changeName, startGame);
     startGame();
   };
 
