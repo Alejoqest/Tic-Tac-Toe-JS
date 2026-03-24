@@ -28,6 +28,8 @@ The app is in the Spanish language for ease when coding.
 
 ## Usage
 
+You can access the game by the [deployed website](https://tic-tac-toe-js-abc.netlify.app/);
+
 You can play the game normally just by pressing the spaces that are allowed.
 
 ## Features
