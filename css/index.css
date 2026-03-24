@@ -129,6 +129,14 @@ input {
     background: var(--r);
 }
 
+a {
+    color: var(--b)
+}
+
+a:hover {
+    color: var(--r)
+}
+
 @media screen and (max-width : 800px) {    
     .body {
         display: flex;
